@@ -3,7 +3,7 @@ require_relative 'models'
 require 'tilt/erubis'
 require 'roda'
 
-class App < Roda
+class RodaGrokking < Roda
   plugin :default_headers,
     'Content-Type'=>'text/html',
     'Content-Security-Policy'=>"default-src 'self' https://oss.maxcdn.com/ https://maxcdn.bootstrapcdn.com https://ajax.googleapis.com",
@@ -13,7 +13,7 @@ class App < Roda
     'X-XSS-Protection'=>'1; mode=block'
 
   use Rack::Session::Cookie,
-    :key => '_App_session',
+    :key => '_RodaGrokking_session',
     #:secure=>!TEST_MODE, # Uncomment if only allowing https:// access
     :secret=>File.read('.session_secret')
 
