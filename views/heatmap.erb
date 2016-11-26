@@ -1,0 +1,36 @@
+<h1>Heat Map</h1>
+<div class='filters row'>
+  <div class="col-md-4">
+    <div class="form-group">
+      <select class="form-control" name="top" id="top">
+        <option value="5">Top 5</option>
+        <option value="10" selected="selected">Top 10</option>
+        <option value="15">Top 15</option>
+        <option value="20">Top 20</option>
+        <option value="30">Top 30</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <div class="input-append date">
+        <input type='text' class='form-control' id='datepicker1'/>
+        <span class="add-on"><i class="icon-th"></i></span>
+      </div>
+    </div>
+  </div>
+  <div class='col-md-4'>
+    <button id='filterBtn' class='btn btn-primary'>Filter</button>
+  </div>
+</div>
+<div class="wrapper" style='height: 400px;'>
+  <div class='heatmap' id='map-canvas' style='width: 100%; height: 100%; position: relative; overflow: hidden;'>
+    &nbsp;
+  </div>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/heatmap.js/2.0.2/heatmap.min.js">
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAN0p15zbYqoXnpjG6F2fD9L3ycwFawbE"></script>
+<script type="text/javascript" src="https://s3-ap-southeast-1.amazonaws.com/viphat.work/gmaps-heatmap.js">
+</script>
+<%== assets(:js) %>
